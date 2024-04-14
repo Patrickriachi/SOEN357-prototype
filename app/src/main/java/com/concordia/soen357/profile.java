@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class profile extends AppCompatActivity {
 
     @Override
@@ -14,17 +16,24 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        // Find the button by its ID
-        Button skipButton = findViewById(R.id.backButton);
-
-        // Set a click listener on that Button
-        skipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create an Intent to start the favCuisine activity
-                Intent intent = new Intent(profile.this, search.class);
-                startActivity(intent);
+        BottomNavigationView navView = findViewById(R.id.bottomNavigationView);
+        navView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    startActivity(new Intent(profile.this, home.class));
+                    return true;
+                case R.id.navigation_search:
+                    startActivity(new Intent(profile.this, search.class));
+                    return true;
+                case R.id.navigation_profile:
+                    return true;
+                default:
+                    return false;
             }
         });
+
+        // Set the home as selected by default
+        navView.setSelectedItemId(R.id.navigation_profile);
+
     }
 }
