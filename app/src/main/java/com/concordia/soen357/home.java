@@ -14,12 +14,34 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        BottomNavigationView navView = findViewById(R.id.bottomNavigationView);
+        navView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    // Home is already displayed, do nothing
+                    return true;
+                case R.id.navigation_search:
+                    startActivity(new Intent(home.this, search.class));
+                    return true;
+                case R.id.navigation_profile:
+                    startActivity(new Intent(home.this, profile.class));
+                    return true;
+                default:
+                    return false;
+            }
+        });
+
+        // Set the home as selected by default
+        navView.setSelectedItemId(R.id.navigation_home);
 
 
         // Find the button by its ID
