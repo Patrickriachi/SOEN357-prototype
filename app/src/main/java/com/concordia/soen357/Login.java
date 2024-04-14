@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         // Find the button by its ID
         Button skipButton = findViewById(R.id.skipButton);
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start the favCuisine activity
-                Intent intent = new Intent(MainActivity.this, favCuisine.class);
+                Intent intent = new Intent(Login.this, favCuisine.class);
                 startActivity(intent);
             }
         });
