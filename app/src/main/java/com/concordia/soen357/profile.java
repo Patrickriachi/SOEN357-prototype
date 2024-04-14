@@ -7,25 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class healthGoals extends AppCompatActivity {
+public class profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_goals);
+        setContentView(R.layout.activity_profile);
 
         // Find the button by its ID
-        Button skipButton = findViewById(R.id.skipButton);
+        Button skipButton = findViewById(R.id.backButton);
 
         // Set a click listener on that Button
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start the favCuisine activity
-                Intent intent = new Intent(healthGoals.this, home.class);
+                Intent intent = new Intent(profile.this, search.class);
                 startActivity(intent);
             }
         });
     }
-
 }

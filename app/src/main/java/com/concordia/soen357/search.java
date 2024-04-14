@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class healthGoals extends AppCompatActivity {
+public class search extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_goals);
+        setContentView(R.layout.activity_search);
 
         // Find the button by its ID
         Button skipButton = findViewById(R.id.skipButton);
@@ -22,10 +22,9 @@ public class healthGoals extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start the favCuisine activity
-                Intent intent = new Intent(healthGoals.this, home.class);
+                Intent intent = new Intent(search.this, profile.class);
                 startActivity(intent);
             }
         });
     }
-
 }
