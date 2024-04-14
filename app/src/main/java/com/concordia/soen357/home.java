@@ -21,6 +21,7 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
         // Find the button by its ID
         Button skipButton = findViewById(R.id.skipButton);
         TextView textView = findViewById(R.id.textView4);
