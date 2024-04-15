@@ -87,7 +87,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins_font_family"
         android:inputType="textPersonName"
-        android:text="test.prototype@gmail.com"
+        android:text="test.prototype@soen357.com"
         android:textSize="50px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
