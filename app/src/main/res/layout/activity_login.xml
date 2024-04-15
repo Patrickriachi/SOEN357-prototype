@@ -160,9 +160,11 @@
         android:id="@+id/imageView11"
         android:layout_width="79dp"
         android:layout_height="66dp"
-        app:srcCompat="@drawable/image"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
